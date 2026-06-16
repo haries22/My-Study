@@ -1,0 +1,73 @@
+# Menyelesaikan Persamaan Non Linear x^3 + x^2 - 3x - 3 dengan Metode Bisection
+
+# Mengimport library yang digunakan
+import time
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Mendefinisikan fungsi
+def f(x):
+    return x**3 + x**2 - 3*x - 3
+
+# Metode Bisection
+def bisection(a, b, tol=1e-6, max_iter=100):
+    fa, fb = f(a), f(b)
+    if fa * fb > 0:
+        raise ValueError("f(a) dan f(b) harus berlawanan tanda. Pilih interval lain.")
+    
+    history = []
+    start = time.perf_counter()
+    
+    for i in range(1, max_iter + 1):
+        c = (a + b) / 2.0
+        fc = f(c)
+        history.append((i, a, b, c, fc))
+        
+        print(f"Iter {i:2d}: a={a:.8f}, b={b:.8f}, c={c:.8f}, f(c)={fc:.8e}")
+        
+        if abs(fc) < tol or (b - a)/2.0 < tol:
+            end = time.perf_counter()
+            print(f"\nAkar diperkirakan di x = {c:.12f}")
+            print(f"f(c) = {fc:.12e}")
+            print(f"Iterasi = {i}, waktu = {(end - start):.6f} s")
+            return c, history
+        
+        if fa * fc < 0:
+            b = c
+            fb = fc
+        else:
+            a = c
+            fa = fc
+
+    end = time.perf_counter()
+    print("\nMetode tidak konvergen dalam batas iterasi.")
+    return c, history
+
+# Menjalankan metode pada interval [1, 2]
+akar, hist = bisection(1, 2, tol=1e-6, max_iter=100)
+
+# Visualisasi fungsi dan titik-titik tengah tiap iterasi
+x_vals = np.linspace(0, 3, 400)
+y_vals = f(x_vals)
+
+plt.figure(figsize=(10, 6))
+plt.plot(x_vals, y_vals, label='f(x)', color='blue')
+plt.axhline(0, color='gray', linestyle='--')
+
+midpoints = [row[3] for row in hist]
+f_midpoints = [f(x) for x in midpoints]
+plt.plot(midpoints, f_midpoints, 'ro', markersize=4, label='Midpoints')
+
+plt.title("Visualisasi Proses Metode Bisection")
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# Menampilkan ringkasan akhir
+print("\n=== Ringkasan Akhir ===")
+print(f"Akar ditemukan pada x = {akar:.12f}")
+print(f"f(x) = {f(akar):.12e}")
+print(f"Jumlah iterasi = {len(hist)}")

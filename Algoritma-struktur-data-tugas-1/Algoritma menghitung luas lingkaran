@@ -1,0 +1,9 @@
+1| Masukkan nilai jari jari
+2| Menetapkan nilai phi=3,14
+3| Pilihan hitungan luas/lingkaran
+4| Jika"YA"maka dengan rumus luas=phi*Radius*^2
+5| Tampilkan luas lingkaran
+6| Jika"TIDAK"maka dengan rumus keliling=2*phi*Radius
+7| Cetak hasil Keliling lingkaran
+8| Program selesai
+9| 

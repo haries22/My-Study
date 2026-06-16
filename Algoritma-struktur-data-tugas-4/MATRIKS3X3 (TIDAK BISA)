@@ -1,0 +1,48 @@
+#insialisai untuk menyimpan nilai matriks/ordo
+a = [[1, -5, 2],
+     [1, 4, 1],
+     [5, 0, 1]]
+
+#insialisasi untuk menyimpan nilai matriks/ordo
+b = [[-1, 2, 4],
+     [3, 5, 2]]
+
+#variabel di bawah untuk menghitung panjang baris/kolom dari matriks di atas
+baris_a = len(a)
+kolom_a = len(a[0])
+
+baris_b = len(b)
+kolom_b = len(b[0])
+
+print(a)
+print(f"Baris matriks a adalah: {baris_a} ")
+print(f"Kolom matriks a adalah: {kolom_a} ")
+
+print(f"Ordo matriks a: {baris_a} x {kolom_a}")
+print()
+
+print(b)
+print(f"Baris matriks b adalah:{baris_b}" )
+print(f"Kolom matriks b adalah:{kolom_b}" ) 
+
+print(f"Ordo matriks b: {baris_b} x {kolom_b}")
+
+#untuk menentukan perkalian matriks bisa/tidaknya di kalikan
+if (kolom_a != baris_b):
+    print("matriks a dengan b tidak dapat di kalikan")
+else:
+    print('''
+Matriks a dengan b dapat di kalikan''')
+
+PS C:\Users\LENOVO\Pictures\Media Madian\Madian\python>
+py matriks.py
+[[1, -5, 2], [1, 4, 1], [5, 0, 1]]
+Baris matriks a adalah: 3 
+Kolom matriks a adalah: 3 
+Ordo matriks a: 3 x 3
+
+[[-1, 2, 4], [3, 5, 2]]
+Baris matriks b adalah:2
+Kolom matriks b adalah:3
+Ordo matriks b: 2 x 3
+matriks a dengan b tidak dapat di kalikan

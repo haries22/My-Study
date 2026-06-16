@@ -1,0 +1,10 @@
+Def fibonachi(n):
+       If n <=0
+            Return print("tidak ada nilai fibonachi")
+     Elif n== 1 or n==2:
+     Return 1
+Else:
+     Return fibonachi(n-1) + fibonachi (n-2)
+a=int (input("masukkan nilai fibonachi: "))
+hasil_fibonachi = fibonachi (a)
+print (hasil_fibonachi)

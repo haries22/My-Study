@@ -1,0 +1,7 @@
+1| Masukan nilai yang di inginkan
+2| Bagi bilangan yang di inginkan dengan angka 2
+3| Jika hasil pembagian sama dengan(=)0 maka itu bilangan genap
+4| jika hasil pembagian tidak sama dengan 0,maka itu bilangan ganjil
+5| Tampilkan hasil genap
+6| Tampilkan hasil ganjil
+7| 

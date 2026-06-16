@@ -1,0 +1,22 @@
+data = []
+jumlah_mahasiswa = int(input("masukkan jumlah mahasiswa: "))
+
+for i in range(jumlah_mahasiswa):
+    print(f"\nmasukkan data mahasiswa ke-{i+1}:")
+    nama = input("Nama:")
+    nim = input("Nim:")
+    tanggal_lahir = input("Tanggal lahir:")
+    
+    data.append({
+        "nama": nama,
+        "nim": nim,
+        "Tanggal lahir": tanggal_lahir
+        })
+print("Data mahasiswa: ")
+
+for j in data:
+    print("Nama: ",j ["nama"] )
+    print("Nim: ",j ["nim"])
+    print("Tanggal lahir: ",j["Tanggal lahir"])
+    print()
+

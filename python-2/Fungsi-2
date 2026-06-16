@@ -1,0 +1,8 @@
+Luas persegi (Panjang,lebar):
+        return Panjang* lebar
+def keliling pesegi Panjang(Panjang, lebar)
+        return 2* (panjang + lebar)
+hasil luas=luaspersegipanjang(p, 1)
+ hasil keliling=(kelilingpersegipanjang(p, 1)
+print("luasnya adalah",hasil_luas)
+print("kelilingnya adalah",hasil_keliling)

@@ -1,0 +1,7 @@
+Detik=int(input("masukkan detik")):
+Hasil=int(detik/60)
+Jam=int(detik/3600
+Sisa_detik=int(detik%360)
+Print(jam,"jam")
+Print(hasil,"menit")
+Print(sisa_detik,"detik")

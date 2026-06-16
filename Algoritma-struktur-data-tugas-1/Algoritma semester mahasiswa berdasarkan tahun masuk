@@ -1,0 +1,9 @@
+1| Masukkan tahun yang di inginkan
+2| Menghitung total tahun sejak mahasiswa masuk
+3| Tahun_berlalu=tahun_sekarang-tahun_masuk
+4| menghitung semester berdasarkan tahun yang sudah berlalu
+5| bulan_sekarang>=8
+6| Jika sudah lewat bulan Agustus,maka sudah memasuki semester ganjil tahun baru
+7| semester=tahun_berlalu*2+1
+8| semester=tahun_berlalu*2
+9| 

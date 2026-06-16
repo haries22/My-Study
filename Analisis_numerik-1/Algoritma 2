@@ -1,0 +1,12 @@
+# Algoritma 2
+total = 0
+#step 1: Input nilai awal adalah angka yang paling kecil
+x_awal2  = 0.0001
+#Step 2: input nilai selanjutnya adalah angka yang besar
+x_selanjutnnya2 = 10000.0
+# Step 3: Melakukan perulangan
+for _ in range (5):
+  total += x_awal2
+total += x_selanjutnnya2
+# Cetak hasil
+print ("Hasil penjumlahan algoritma 2 adalah:",total)

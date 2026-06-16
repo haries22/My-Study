@@ -1,0 +1,8 @@
+#step awal  input nilai
+x_awal = 10000.0
+# step  2
+x_lanjutannnya1 =  0.0001
+#Step 3: lakukan perulangan 5 kali
+for _ in range(5):
+    x_awal += x_lanjutannnya1
+print("hasil penjumlahan algoritma dari", x_awal)

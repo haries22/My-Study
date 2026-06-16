@@ -1,0 +1,49 @@
+1.pembuatan basis data
+  create database praktikum_1;
+  use praktikum_1;
+
+2.menghapus basis data
+  drop database praktikum_1;
+
+3.pembuatan tabel dalam basis data
+  create table dosen (
+  nidn varchar(10) primary key,
+  nama varchar(50) not null,
+  fungsional varchar(30)
+  );
+
+  create table mahasiswa (
+  nim varchar(15) primary key,
+  nama varchar(50) not null,
+  ttl date,
+  alamat varchar(100)  
+  );
+
+  create table mata_kuliah (
+  kode_mk varchar(10) primary key,
+  nama_mk varchar(50) not null,
+  sks int not null,
+  nidn varchar(10),
+  foreign key (nidn) references dosen(nidn)
+  );
+
+  create table nilai (
+  id_nilai int auto_increment primary key,
+  nim varchar(15),
+  kode_mk varchar(10),
+  nilai char(2),
+  foreign key (nim) references mahasiswa(nim),
+  foreign key (kode_mk) references mata_kuliah(kode_mk)
+  );
+
+4.menghapus tabel
+  drop table satpam;
+
+5.mengupdate atribut tabel
+  alter table mahasiswa add email varchar(50);
+
+6.mengisi tabel (hanya mahasiswa harista)
+  insert into mahasiswa (nim, nama, ttl, alamat) values ('240306053', 'lalu muh harista gunawan', '2003-05-24', 'mataram');
+
+7.mengupdate isian tabel
+  update mahasiswa set alamat = 'lombok barat' where nim = '240306053';
